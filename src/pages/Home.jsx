@@ -2,9 +2,27 @@ import React, { useEffect, useState } from 'react';
 import '../styles/Home.css';
 import ajlogo from '../assets/ajlogo.png';
 import proffesionalphoto from '../assets/proffesionalphoto.png';
+import About from '../components/About';
+import Skills from '../components/Skills';
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
 
 const Home = () => {
   const [showTitle, setShowTitle] = useState(false);
+  const [currentGreeting, setCurrentGreeting] = useState(0);
+
+  const greetings = [
+    'Hello',
+    'Hola',
+    'Bonjour',
+    'こんにちは',
+    '你好',
+    '안녕하세요',
+    'Ciao',
+    'Hallo',
+    'नमस्ते',
+    'مرحبا'
+  ];
 
   useEffect(() => {
     // Wait for splash screen to complete (3 seconds) before starting the typing animation
@@ -12,7 +30,20 @@ const Home = () => {
       setShowTitle(true);
     }, 3000);
 
-    return () => clearTimeout(timer);
+    // Initial delay before starting the greeting cycle
+    const initialDelay = setTimeout(() => {
+      // Start cycling through greetings
+      const greetingInterval = setInterval(() => {
+        setCurrentGreeting((prev) => (prev + 1) % greetings.length);
+      }, 2000);
+
+      return () => clearInterval(greetingInterval);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(initialDelay);
+    };
   }, []);
 
   return (
@@ -24,7 +55,7 @@ const Home = () => {
           </div>
           <div className="text-content">
             <h1 className="home-title" style={{ display: showTitle ? 'block' : 'none' }}>
-              Hi, I'm <span>Amiel</span>
+              <span className="greeting">{greetings[currentGreeting]}</span>, I'm <span className="name">Amiel</span>
             </h1>
             <h2 className="home-subtitle">Full Stack Developer</h2>
             <p className="home-description">
@@ -45,6 +76,12 @@ const Home = () => {
           <div className="profile-picture-container">
             <img src={proffesionalphoto} alt="Professional Photo" className="home-profile-photo" />
           </div>
+        </div>
+        <div className="home-page">
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
         </div>
       </div>
     </div>

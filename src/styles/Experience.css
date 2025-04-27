@@ -1,0 +1,128 @@
+.experience-section {
+  padding: 4rem 0;
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+}
+
+.experience-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--light-gray);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--medium-gray);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: var(--medium-gray);
+  border-radius: 8px;
+  position: relative;
+}
+
+.timeline-content::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--blue);
+  border-radius: 50%;
+  top: 15px;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+  right: -50px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+  left: -50px;
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px 0;
+  color: var(--light-gray);
+  font-size: 1.5rem;
+}
+
+.timeline-content h4 {
+  margin: 0 0 5px 0;
+  color: var(--blue);
+  font-size: 1.2rem;
+}
+
+.timeline-date {
+  color: var(--light-gray);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.timeline-description li {
+  margin-bottom: 5px;
+  color: var(--light-gray);
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-content::after {
+    left: -50px !important;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+} 

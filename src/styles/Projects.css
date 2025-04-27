@@ -1,63 +1,114 @@
 .projects-section {
-  background-color: var(--dark-gray);
-  min-height: 100vh;
   padding: 4rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
 }
 
-.projects-content {
+.projects-section .container {
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
-  text-align: center;
 }
 
-.projects-title {
-  font-size: 3rem;
-  color: var(--light-blue);
+.section-title {
+  font-size: 2.5rem;
   margin-bottom: 3rem;
+  text-align: center;
+  color: var(--light-gray);
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  justify-items: center;
 }
 
 .project-card {
-  background-color: rgba(96, 165, 250, 0.1);
-  border-radius: 10px;
-  padding: 2rem;
-  width: 100%;
-  max-width: 400px;
-  transition: transform 0.3s ease;
+  background-color: var(--medium-gray);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.project-title {
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  margin: 0 0 1rem 0;
+  color: var(--light-gray);
   font-size: 1.5rem;
-  color: var(--light-blue);
-  margin-bottom: 1rem;
 }
 
 .project-description {
-  color: var(--soft-white);
+  margin: 0 0 1rem 0;
+  color: var(--light-gray);
   line-height: 1.6;
 }
 
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-tech span {
+  background-color: var(--blue);
+  color: var(--light-gray);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  color: var(--light-gray);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: var(--blue);
+  color: var(--light-gray);
+  border-color: var(--blue);
+}
+
 @media (max-width: 768px) {
-  .projects-title {
-    font-size: 2.5rem;
-  }
-  
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
   }
 } 
