@@ -1,19 +1,34 @@
 import React, { useState } from 'react';
 import '../styles/Sidebar.css';
 import ajlogo from '../assets/ajlogo.png';
+import resume from '../assets/HaliliAmiel_UCF_2025.pdf';
+
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { IoIosDocument } from "react-icons/io";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleEmailClick = async () => {
+    try {
+      await navigator.clipboard.writeText('str8lanes@gmail.com');
+      setShowTooltip(true);
+      setTimeout(() => setShowTooltip(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
   };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false); // Close sidebar after clicking
+      setIsOpen(false);
     }
   };
 
@@ -39,10 +54,16 @@ const Sidebar = () => {
           <div className="social-section">
             <h3>Connect</h3>
             <ul>
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-              <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+              <li><a href="https://github.com/AmielHalili" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/amiel-halili" target="_blank" rel="noopener noreferrer"><FaLinkedin /> LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/aj.halili" target="_blank" rel="noopener noreferrer"><FaInstagram /> Instagram</a></li>
+              <li><a href={resume} target="_blank" rel="noopener noreferrer"><IoIosDocument /> Resume</a></li>
+              <li>
+                <button onClick={handleEmailClick} className="sidebar-email-button">
+                  <FaEnvelope /> Send Email
+                  {showTooltip && <span className="sidebar-tooltip">Email copied!</span>}
+                </button>
+              </li>
             </ul>
           </div>
 

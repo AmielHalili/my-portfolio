@@ -1,7 +1,20 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { useState } from 'react';
 import '../styles/Footer.css';
 
 const Footer = () => {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  const handleEmailClick = async () => {
+    try {
+      await navigator.clipboard.writeText('str8lanes@gmail.com');
+      setShowTooltip(true);
+      setTimeout(() => setShowTooltip(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -9,14 +22,14 @@ const Footer = () => {
           © {new Date().getFullYear()} Amiel Halili. All rights reserved.
         </p>
         <div className="footer-icons">
-          <a
-            href="mailto:amiel.halili@gmail.com"
-            className="footer-icon"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={handleEmailClick}
+            className="footer-icon email-button"
+            title="Copy email to clipboard"
           >
             <FaEnvelope />
-          </a>
+            {showTooltip && <span className="tooltip">Email copied!</span>}
+          </button>
           <a
             href="https://github.com/amielhalili"
             className="footer-icon"
@@ -26,7 +39,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/amielhalili"
+            href="https://www.linkedin.com/in/amiel-halili"
             className="footer-icon"
             target="_blank"
             rel="noopener noreferrer"
@@ -34,12 +47,12 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://twitter.com/amielhalili"
+            href="https://www.instagram.com/aj.halili"
             className="footer-icon"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter />
+            <FaInstagram />
           </a>
         </div>
       </div>
