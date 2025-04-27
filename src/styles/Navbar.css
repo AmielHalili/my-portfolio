@@ -1,0 +1,156 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--dark-gray);
+  z-index: 50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.navbar-brand img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  
+  object-fit: cover;
+  opacity: 1;
+
+  @media (max-width: 768px) {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--light-blue);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+.navbar-brand span {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.navbar-brand span:hover {
+  color: var(--bright-blue);
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.nav-link {
+  color: var(--soft-white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--bright-blue);
+  background-color: rgba(96, 165, 250, 0.1);
+}
+
+.mobile-menu-button {
+  display: block;
+}
+
+.menu-toggle {
+  color: var(--soft-white);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+  color: var(--bright-blue);
+}
+
+.mobile-menu {
+  display: block;
+  background-color: var(--dark-gray);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav {
+  padding: 1rem 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  color: var(--soft-white);
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.mobile-nav-link:hover {
+  color: var(--bright-blue);
+  background-color: rgba(96, 165, 250, 0.1);
+}
+
+.mobile-social-links {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(96, 165, 250, 0.2);
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-link {
+  color: var(--soft-white);
+  transition: all 0.3s;
+  font-size: 1.5rem;
+}
+
+.social-link:hover {
+  color: var(--bright-blue);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 3rem;
+  }
+
+  .mobile-menu-button {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+} 
