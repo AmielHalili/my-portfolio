@@ -9,19 +9,20 @@ const Experience = () => {
         <div className="timeline">
           <div className="timeline-item">
             <div className="timeline-content">
-              <h3>Senior Full Stack Developer</h3>
-              <h4>Tech Solutions Inc.</h4>
-              <p className="timeline-date">January 2022 - Present</p>
+              <h3>Full Stack Developer Intern</h3>
+              <h4>Cooltured Collections LLC.</h4>
+              <p className="timeline-date">May 2025 - Present</p>
               <ul className="timeline-description">
-                <li>Led development of enterprise-level web applications</li>
+                <li>Development of enterprise-level web applications</li>
                 <li>Implemented microservices architecture</li>
-                <li>Mentored junior developers</li>
+                <li>Worked with teams to develop complex components</li>
                 <li>Optimized application performance</li>
               </ul>
             </div>
           </div>
+          {/*
 
-          <div className="timeline-item">
+           <div className="timeline-item">
             <div className="timeline-content">
               <h3>Full Stack Developer</h3>
               <h4>Digital Innovations</h4>
@@ -48,6 +49,8 @@ const Experience = () => {
               </ul>
             </div>
           </div>
+          */}
+          
         </div>
       </div>
     </section>

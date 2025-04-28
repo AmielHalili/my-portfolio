@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../styles/Home.css';
 import ajlogo from '../assets/ajlogo.png';
 import proffesionalphoto from '../assets/proffesionalphoto.png';
@@ -42,6 +43,7 @@ import java from '../../src/assets/java-svgrepo-com.svg';
 import csharp from '../../src/assets/c-sharp-16-svgrepo-com.svg';
 
 const Home = () => {
+  const location = useLocation();
   const [showTitle, setShowTitle] = useState(false);
   const [currentGreeting, setCurrentGreeting] = useState(0);
 
@@ -74,13 +76,6 @@ const Home = () => {
     { name: 'PyTorch', icon: <img src={pytorch} alt="PyTorch" /> },
     { name: 'HTML', icon: <img src={html} alt="HTML" /> },
     { name: 'CSS', icon: <img src={css} alt="CSS" /> },
-    
-    
-    
-    
-    
-    
-    
   ];
 
   const greetings = [
@@ -112,11 +107,18 @@ const Home = () => {
       return () => clearInterval(greetingInterval);
     }, 2000);
 
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
     return () => {
       clearTimeout(timer);
       clearTimeout(initialDelay);
     };
-  }, []);
+  }, [location.state]);
 
   return (
     <div className="home-section">
@@ -139,20 +141,20 @@ const Home = () => {
               I build exceptional digital experiences that make a difference.
             </p>
             <div className="skills-marquee">
-          <Marquee
-            speed={50}
-            gradient={false}
-            pauseOnHover={false}
-            direction="left"
-          >
-            {skills.map((skill, index) => (
-              <div key={index} className="skill-item-marquee">
-                <div className="skill-icon">{skill.icon}</div>
-                <div className="skill-name">{skill.name}</div>
-              </div>
-            ))}
-          </Marquee>
-        </div>
+              <Marquee
+                speed={50}
+                gradient={false}
+                pauseOnHover={false}
+                direction="left"
+              >
+                {skills.map((skill, index) => (
+                  <div key={index} className="skill-item-marquee">
+                    <div className="skill-icon">{skill.icon}</div>
+                    <div className="skill-name">{skill.name}</div>
+                  </div>
+                ))}
+              </Marquee>
+            </div>
             <div className="social-links">
               <a href="https://github.com" className="social-link" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>

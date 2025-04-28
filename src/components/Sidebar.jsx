@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Sidebar.css';
 import ajlogo from '../assets/ajlogo.png';
 import resume from '../assets/HaliliAmiel_UCF_2025.pdf';
@@ -9,6 +10,7 @@ import { IoIosDocument } from "react-icons/io";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -24,12 +26,9 @@ const Sidebar = () => {
     }
   };
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-    }
+  const handleNavigation = (sectionId) => {
+    navigate('/', { state: { scrollTo: sectionId } });
+    setIsOpen(false);
   };
 
   return (
@@ -44,10 +43,10 @@ const Sidebar = () => {
           <div className="navigation-section">
             <h3>Navigation</h3>
             <ul>
-              <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
-              <li><a href="#skills" onClick={() => scrollToSection('skills')}>Skills</a></li>
-              <li><a href="#experience" onClick={() => scrollToSection('experience')}>Experience</a></li>
-              <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
+              <li><a onClick={() => handleNavigation('about')}>About</a></li>
+              <li><a onClick={() => handleNavigation('skills')}>Skills</a></li>
+              <li><a onClick={() => handleNavigation('experience')}>Experience</a></li>
+              <li><a onClick={() => handleNavigation('projects')}>Projects</a></li>
             </ul>
           </div>
           

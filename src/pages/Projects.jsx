@@ -21,6 +21,13 @@ const Projects = () => {
       github: 'https://github.com/yourusername/weather-dashboard',
       demo: 'https://demo-weather.com',
     },
+    {
+      title: 'Weather Dashboard',
+      description: 'A weather application that displays current and forecasted weather data using a weather API.',
+      technologies: ['React', 'OpenWeather API', 'Chart.js'],
+      github: 'https://github.com/yourusername/weather-dashboard',
+      demo: 'https://demo-weather.com',
+    },
   ];
 
   return (

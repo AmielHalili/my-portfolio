@@ -1,0 +1,125 @@
+/* ProjectDetails.css */
+
+/* Centering enhancements */
+
+.min-h-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .max-w-6xl {
+    max-width: 72rem; /* 1152px */
+    width: 100%;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Flexbox centering for 'Project Not Found' */
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+body {
+    background-color: #1f1f1f; /* Dark gray */
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+  }
+  
+  .bg-dark-gray {
+    background-color: #1f1f1f;
+  }
+  
+  .bg-mid-gray {
+    background-color: #2b2b2b;
+  }
+  
+  .text-soft-white {
+    color: #f5f5f5;
+  }
+  
+  .text-light-gray {
+    color: #c4c4c4;
+  }
+  
+  .text-light-blue {
+    color: #5edfff;
+  }
+  
+  .hover\:text-soft-white:hover {
+    color: #f5f5f5;
+  }
+  
+  .hover\:bg-bright-blue:hover {
+    background-color: #009dff;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .rounded-xl {
+    border-radius: 1rem;
+  }
+  
+  .transition-colors {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Button Enhancements */
+  a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Tag Styles */
+  span.rounded-full {
+    background: linear-gradient(145deg, #202020, #2e2e2e);
+    box-shadow: 2px 2px 5px #1c1c1c, -2px -2px 5px #323232;
+  }
+  
+  /* Features bullets */
+  .text-light-blue.mr-2 {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  
+  /* Responsive image section */
+  img.object-cover {
+    border-bottom: 4px solid #5edfff;
+  }
+  
+  /* Section headers */
+  h2 {
+    border-left: 4px solid #5edfff;
+    padding-left: 0.75rem;
+  }
+  
+  /* Extra polish */
+  .bg-mid-gray:hover {
+    background-color: #343434;
+    transition: background-color 0.3s ease;
+  }
+  
