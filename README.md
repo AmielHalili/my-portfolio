@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 ## 🚀 Live Demo
 
-Check out the live version of my portfolio here: [site]([https://amielhalili.github.io/my-portfolio](https://amielhalili.click/))
+Check out the live version of my portfolio here: https://amielhalili.click/ 
 
 ## 🛠️ Built With
 
