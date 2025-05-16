@@ -4,6 +4,12 @@ import '../styles/Projects.css';
 import ecosensepage from '../projects/ecosensepage.png';
 import dermadetectpage from '../projects/DermadetectPage.png';
 import wanderitinerarypage from '../projects/wanderitinerarypage.png';
+import wanderjournalpage from '../projects/WanderJournalPage.png';
+
+
+
+
+
 const Projects = () => {
   const navigate = useNavigate();
 
@@ -128,7 +134,7 @@ const Projects = () => {
               <div className="control-circle green"></div>
             </div>
             <div className="project-image">
-              <img src="/path-to-project-image-3.jpg" alt="Wander Journal" />
+              <img src={wanderjournalpage} alt="Wander Journal" />
             </div>
             <div className="project-content">
               <h3>Wander - Journal</h3>
@@ -145,6 +151,8 @@ const Projects = () => {
               <div className="project-links">
                 {/* <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a> */}
                 <a href="https://github.com/tim56rus/travel-guide" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a>
+                <a href="https://www.youtube.com/watch?v=7S6OhmtESoc" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a>
+
               </div>
             </div>
           </div>

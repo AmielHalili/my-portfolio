@@ -153,6 +153,7 @@ const ProjectDetails = () => {
       ],
       technologies: ["React", "Express", "MongoDB", "JavaScript", "Node.js"],
       github: "https://github.com/tim56rus/travel-guide",
+      demo: "https://www.youtube.com/watch?v=7S6OhmtESoc",
       image: wanderlogo,
     },
     whooga: {
