@@ -34,17 +34,19 @@ const SplashScreen = ({ onFinish }) => {
 
   return (
     <div className={`intro ${fade ? 'slide-up' : ''}`}>
-      <h1 className="logo-header">
-        {letters.map(({ char, delay, id }) => (
-          <span
-            key={id}
-            className={`letter ${active ? 'active' : ''} ${fade ? 'fade' : ''}`}
-            style={{ transitionDelay: `${delay}ms` }}
-          >
-            {char}
-          </span>
-        ))}
-      </h1>
+      <div className="logo-wrapper">
+        <h1 className="logo-header">
+          {letters.map(({ char, delay, id }) => (
+            <span
+              key={id}
+              className={`letter ${active ? 'active' : ''} ${fade ? 'fade' : ''}`}
+              style={{ transitionDelay: `${delay}ms` }}
+            >
+              {char}
+            </span>
+          ))}
+        </h1>
+      </div>
     </div>
   );
 };

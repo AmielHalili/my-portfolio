@@ -1,15 +1,27 @@
 .intro {
   position: fixed;
   z-index: 9999;
-  left: 0;
-  top: 0;
+  inset: 0;
   width: 100%;
   height: 100vh;
-  background-color: #111827; /* Darker gray */
+  background-color: #111827;
   transform: translateY(0);
   will-change: transform;
   pointer-events: none;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.logo-wrapper {
+  width: 100%;
+  max-width: 32rem;
+  display: flex;
+  justify-content: center;
+  transform-origin: center;
+  transform: scale(1);
 }
 
 .intro.slide-up {
@@ -27,17 +39,19 @@
 }
 
 .logo-header {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: var(--light-blue);
-  font-size: 6rem;
+  font-size: clamp(1.2rem, 8vw, 6rem);
   font-weight: 900;
   text-align: center;
-  white-space: nowrap;
   text-shadow: 0 0 10px rgba(0, 195, 255, 0.2);
-  letter-spacing: 2px;
+  letter-spacing: clamp(1px, 0.4vw, 4px);
+  line-height: 1.05;
+  max-width: min(90vw, 28rem);
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(0.05em, 0.5vw, 0.15em);
+  overflow-wrap: anywhere;
 }
 
 .letter {
@@ -57,20 +71,30 @@
   transform: translateY(-20px);
 }
 
-.logo {
-  display: inline-block;
-  opacity: 0;
-  position: relative;
-  bottom: -20px;
-  transition: all 0.5s ease-out;
+@media (max-width: 480px) {
+  .intro {
+    padding: 0 1rem;
+  }
+
+  .logo-wrapper {
+    transform: scale(0.85);
+  }
+
+  .logo-header {
+    max-width: 100%;
+    gap: 0.075em;
+    letter-spacing: 0.05em;
+    font-size: clamp(1rem, 9vw, 2.8rem);
+  }
 }
 
-.logo.active {
-  bottom: 0;
-  opacity: 1;
-}
+@media (max-width: 360px) {
+  .logo-wrapper {
+    transform: scale(0.75);
+  }
 
-.logo.fade {
-  bottom: 150px;
-  opacity: 0;
-} 
+  .logo-header {
+    font-size: clamp(0.95rem, 11vw, 2.4rem);
+    letter-spacing: 0.04em;
+  }
+}
