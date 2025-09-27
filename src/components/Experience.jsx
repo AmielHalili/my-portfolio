@@ -6,55 +6,51 @@ const Experience = () => {
     <section id="experience" className="experience-section">
       <div className="container">
         <h2 className="section-title">Experience</h2>
+
         <div className="timeline">
+          {/* Mirai Arcade */}
           <div className="timeline-item">
             <div className="timeline-content">
-              <h3>Full Stack Developer Intern</h3>
-              <h4>Cooltured Collections LLC.</h4>
-              <p className="timeline-date">May 2025 - Present</p>
+              <h3>Software Developer & IT Associate</h3>
+              <h4>Mirai Arcade</h4>
+              <p className="timeline-date">May 2025 – Present</p>
               <ul className="timeline-description">
-                <li>Development of enterprise-level web applications</li>
-                <li>Implemented microservices architecture</li>
-                <li>Worked with teams to develop complex components</li>
-                <li>Optimized application performance</li>
-              </ul>
-            </div>
-          </div>
-          {/*
-
-           <div className="timeline-item">
-            <div className="timeline-content">
-              <h3>Full Stack Developer</h3>
-              <h4>Digital Innovations</h4>
-              <p className="timeline-date">June 2020 - December 2021</p>
-              <ul className="timeline-description">
-                <li>Developed responsive web applications</li>
-                <li>Integrated third-party APIs</li>
-                <li>Implemented CI/CD pipelines</li>
-                <li>Conducted code reviews</li>
+                <li>Built and maintained a Shopify storefront with Hydrogen/Oxygen, improving frontend performance and streamlining checkout for 100+ monthly users.</li>
+                <li>Supported POS and membership systems; combined software diagnostics with hardware support to increase uptime and reliability.</li>
               </ul>
             </div>
           </div>
 
+          {/* Cooledtured Collections LLC */}
           <div className="timeline-item">
             <div className="timeline-content">
-              <h3>Junior Developer</h3>
-              <h4>StartUp Tech</h4>
-              <p className="timeline-date">January 2019 - May 2020</p>
+              <h3>Web Developer Intern</h3>
+              <h4>Cooledtured Collections LLC</h4>
+              <p className="timeline-date">May 2025 – Sep 2025</p>
               <ul className="timeline-description">
-                <li>Built frontend components</li>
-                <li>Fixed bugs and issues</li>
-                <li>Wrote unit tests</li>
-                <li>Documented code</li>
+                <li>Shipped responsive Shopify pages emphasizing UX, accessibility, and SEO best practices in collaboration with design/marketing.</li>
+                <li>Implemented Firebase for real-time product data and created reusable React components to improve client-side functionality.</li>
               </ul>
             </div>
           </div>
-          */}
-          
+
+          {/* Oasis */}
+          <div className="timeline-item">
+            <div className="timeline-content">
+              <h3>Frontend Developer Intern</h3>
+              <h4>Oasis</h4>
+              <p className="timeline-date">May 2025 – Present</p>
+              <ul className="timeline-description">
+                <li>Delivered modular UI components and smooth end-to-end user flows for an AI-driven travel itinerary app.</li>
+                <li>Integrated external APIs and collaborated in an Agile startup environment to ship and iterate quickly.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   );
 };
 
-export default Experience; 
+export default Experience;

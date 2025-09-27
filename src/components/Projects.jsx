@@ -1,20 +1,21 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/Projects.css';
-import ecosensepage from '../projects/ecosensepage.png';
-import dermadetectpage from '../projects/DermadetectPage.png';
-import wanderitinerarypage from '../projects/wanderitinerarypage.png';
-import wanderjournalpage from '../projects/WanderJournalPage.png';
-
-
-
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/Projects.css";
+import ecosensepage from "../projects/ecosensepage.png";
+import dermadetectpage from "../projects/DermadetectPage.png";
+import wanderitinerarypage from "../projects/wanderitinerarypage.png";
+import wanderjournalpage from "../projects/WanderJournalPage.png";
+import hyvepage from "../projects/HyvePage.png";
 
 const Projects = () => {
   const navigate = useNavigate();
 
   const handleProjectClick = (projectName) => {
-    navigate(`/projects/${encodeURIComponent(projectName.replace(/\s+/g, '-').toLowerCase())}`);
+    navigate(
+      `/projects/${encodeURIComponent(
+        projectName.replace(/\s+/g, "-").toLowerCase()
+      )}`
+    );
   };
 
   return (
@@ -22,10 +23,9 @@ const Projects = () => {
       <div className="container">
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
-          
-          <div 
+          <div
             className="project-card"
-            onClick={() => handleProjectClick('Ecosense')}
+            onClick={() => handleProjectClick("Ecosense")}
           >
             <div className="window-controls">
               <div className="control-circle red"></div>
@@ -38,7 +38,10 @@ const Projects = () => {
             <div className="project-content">
               <h3>Ecosense (1st Place)</h3>
               <p className="project-description">
-                A full-stack dashboard app with user authentication that utilizes AI and ML to analyze user's energy consumption and provide insights/suggestions to reduce energy consumption and save money.
+                A full-stack dashboard app with user authentication that
+                utilizes AI and ML to analyze user's energy consumption and
+                provide insights/suggestions to reduce energy consumption and
+                save money.
               </p>
               <div className="project-tech">
                 <span>React</span>
@@ -50,16 +53,37 @@ const Projects = () => {
                 <span>Pinecone</span>
               </div>
               <div className="project-links">
-                <a href="https://www.youtube.com/watch?v=H_4sKeKr6tE" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a>
-                <a href="https://github.com/Jaehoonoo/EcoSense" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a>
-                <a href="https://devpost.com/software/ecosense-tvoi5q" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Devpost</a>
+                <a
+                  href="https://www.youtube.com/watch?v=H_4sKeKr6tE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/Jaehoonoo/EcoSense"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://devpost.com/software/ecosense-tvoi5q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Devpost
+                </a>
               </div>
             </div>
           </div>
 
-          <div 
+          <div
             className="project-card"
-            onClick={() => handleProjectClick('DermaDetect')}
+            onClick={() => handleProjectClick("DermaDetect")}
           >
             <div className="window-controls">
               <div className="control-circle red"></div>
@@ -72,7 +96,9 @@ const Projects = () => {
             <div className="project-content">
               <h3>DermaDetect</h3>
               <p className="project-description">
-                A web app that uses CNNs and LLMs to detect skin cancer (benign/malignant) and provide a diagnosis, along with any necessary plan of action.
+                A web app that uses CNNs and LLMs to detect skin cancer
+                (benign/malignant) and provide a diagnosis, along with any
+                necessary plan of action.
               </p>
               <div className="project-tech">
                 <span>React</span>
@@ -85,16 +111,37 @@ const Projects = () => {
                 <span>LLM</span>
               </div>
               <div className="project-links">
-                <a href="https://www.youtube.com/watch?v=PZ0A-X5kTIU&t=7s" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a>
-                <a href="https://github.com/AmielHalili/DermaDetector" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a>
-                <a href="https://devpost.com/software/dermadetect" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Devpost</a>
+                <a
+                  href="https://www.youtube.com/watch?v=PZ0A-X5kTIU&t=7s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/AmielHalili/DermaDetector"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://devpost.com/software/dermadetect"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Devpost
+                </a>
               </div>
             </div>
           </div>
 
-          <div 
+          <div
             className="project-card"
-            onClick={() => handleProjectClick('Wander Travel Itinerary')}
+            onClick={() => handleProjectClick("Wander Travel Itinerary")}
           >
             <div className="window-controls">
               <div className="control-circle red"></div>
@@ -107,7 +154,8 @@ const Projects = () => {
             <div className="project-content">
               <h3>Wander - Travel Itinerary</h3>
               <p className="project-description">
-                A website that allows users to create and share travel itineraries, and share their own experiences with others.
+                A website that allows users to create and share travel
+                itineraries, and share their own experiences with others.
               </p>
               <div className="project-tech">
                 <span>React</span>
@@ -115,18 +163,31 @@ const Projects = () => {
                 <span>MongoDB</span>
                 <span>JavaScript</span>
                 <span>Node.js</span>
-                
               </div>
               <div className="project-links">
-                <a href="https://wander-tau.vercel.app/home" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Site</a>
-                <a href="https://github.com/AmielHalili/Wander" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a>
+                <a
+                  href="https://wander-tau.vercel.app/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Site
+                </a>
+                <a
+                  href="https://github.com/AmielHalili/Wander"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub
+                </a>
               </div>
             </div>
           </div>
 
-          <div 
+          <div
             className="project-card"
-            onClick={() => handleProjectClick('Wander Journal')}
+            onClick={() => handleProjectClick("Wander Journal")}
           >
             <div className="window-controls">
               <div className="control-circle red"></div>
@@ -139,7 +200,8 @@ const Projects = () => {
             <div className="project-content">
               <h3>Wander - Journal</h3>
               <p className="project-description">
-                A website that allows users to write about their travel experiences.
+                A website that allows users to write about their travel
+                experiences.
               </p>
               <div className="project-tech">
                 <span>React</span>
@@ -150,16 +212,29 @@ const Projects = () => {
               </div>
               <div className="project-links">
                 {/* <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a> */}
-                <a href="https://github.com/tim56rus/travel-guide" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a>
-                <a href="https://www.youtube.com/watch?v=7S6OhmtESoc" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a>
-
+                <a
+                  href="https://github.com/tim56rus/travel-guide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.youtube.com/watch?v=7S6OhmtESoc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Demo
+                </a>
               </div>
             </div>
           </div>
 
-          <div 
+          <div
             className="project-card"
-            onClick={() => handleProjectClick('Whooga')}
+            onClick={() => handleProjectClick("Whooga")}
           >
             <div className="window-controls">
               <div className="control-circle red"></div>
@@ -172,7 +247,8 @@ const Projects = () => {
             <div className="project-content">
               <h3>Whooga (In Progress)</h3>
               <p className="project-description">
-                A website that allows users to write about their travel experiences.
+                A website that allows users to write about their travel
+                experiences.
               </p>
               <div className="project-tech">
                 <span>React</span>
@@ -190,7 +266,65 @@ const Projects = () => {
                 {/* <a href="https://github.com/tim56rus/travel-guide" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a> */}
               </div>
             </div>
+          </div>
 
+          <div
+            className="project-card"
+            onClick={() => handleProjectClick("Hyve")}
+          >
+            <div className="window-controls">
+              <div className="control-circle red"></div>
+              <div className="control-circle yellow"></div>
+              <div className="control-circle green"></div>
+            </div>
+
+            <div className="project-image">
+              <img src={hyvepage} alt="Hyve" />
+            
+            </div>
+
+            <div className="project-content">
+              <h3>Hyve</h3>
+              <p className="project-description">
+                Turn nearby professionals into your network: find or host meetups and connect by shared interests, roles, and skills.
+              </p>
+
+              <div className="project-tech">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind CSS</span>
+                <span>Node.js</span>
+                <span>Supabase</span>
+                <span>Vercel</span>
+              </div>
+
+              <div className="project-links">
+                <a
+                  href="https://hyve-delta.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Site
+                </a>
+                <a
+                  href="https://youtu.be/HFobu8bqfzw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/AmielHalili/Hyve"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -198,4 +332,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

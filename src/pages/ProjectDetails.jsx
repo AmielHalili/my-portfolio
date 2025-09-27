@@ -10,6 +10,8 @@ import dermadetectlogo from "../projects/dermadetectlogo.png";
 import ajlogo from "../assets/ajlogo.png";
 import wanderlogo from "../projects/wanderlogo.svg";
 import wanderlogo2 from "../projects/WanderLogoItinerary.png";
+import hyvelogo from "../projects/hyvelogo.png"; 
+
 
 import react from '../assets/react-svgrepo-com.svg';
 import javascript from '../assets/javascript-svgrepo-com.svg';
@@ -17,7 +19,11 @@ import html from '../assets/html-five-svgrepo-com.svg';
 import css from '../assets/css-3-svgrepo-com.svg';
 import nextjs from '../assets/next-dot-js-svgrepo-com.svg';
 import typescript from '../assets/typescript-svgrepo-com.svg';
+import tailwind from '../../src/assets/tailwind-svgrepo-com.svg';
+import supabase from '../assets/supabase-svgrepo-com.svg';
+import firebase from '../../src/assets/firebase-svgrepo-com.svg';
 
+import shopify from '../../src/assets/shopify-color-svgrepo-com.svg';
 import nodejs from '../assets/node-js-svgrepo-com.svg';
 import express from '../assets/express-svgrepo-com.svg';
 import mongodb from '../assets/mongodb-svgrepo-com.svg';
@@ -36,8 +42,7 @@ import csharp from '../assets/c-sharp-16-svgrepo-com.svg';
 import tensorflow from '../assets/tensorflow-svgrepo-com.svg';
 import pytorch from '../assets/pytorch-svgrepo-com.svg';
 import axios from '../assets/httpshortcuts-svgrepo-com.svg';
-
-
+import vercelIcon from '../assets/vercel-logo-svgrepo-com.svg';
 
 const ProjectDetails = () => {
   const { projectname } = useParams();
@@ -61,11 +66,15 @@ const ProjectDetails = () => {
     "TensorFlow": tensorflow,
     "PyTorch": pytorch,
     "Axios": axios,
-    
     "RESTful APIs": restful,
     "Node.js": nodejs,
+    "Supabase": supabase,
+    "Vercel": vercelIcon, 
+    "Tailwind": tailwind,
+    "Firebase": firebase,
+    "Shopify": shopify,
+    
   };
-  
 
   // Project data mapping
   const projectData = {
@@ -181,6 +190,25 @@ const ProjectDetails = () => {
       ],
       image: ajlogo,
     },
+
+    // 🔥 HYVE
+    hyve: {
+      title: "Hyve",
+      overview:
+        "A community platform to create and find local professional meetups—and match with peers by interest, role, and skill.",
+      features: [
+        "Create and host events",
+        "Discover local meetups by interest, role, and skills",
+        "User profiles & RSVP management",
+        "Search and filtering",
+        "Responsive UI",
+      ],
+      technologies: ["React", "Node.js", "JavaScript", "Supabase", "Tailwind", "Vercel"],
+      github: "https://github.com/AmielHalili/Hyve",
+      demo: "https://youtu.be/HFobu8bqfzw",
+      website: "https://hyve-delta.vercel.app/",
+      image: hyvelogo,
+    },
   };
 
   const project = projectData[projectname];
@@ -218,6 +246,17 @@ const ProjectDetails = () => {
             </h1>
             <p className="text-light-gray text-lg mb-6">{project.overview}</p>
             <div className="project-links flex gap-4 flex-wrap justify-center mt-4">
+              {/* NEW: Live Site support */}
+              {project.website && (
+                <a
+                  href={project.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="links"
+                >
+                  Live Site
+                </a>
+              )}
               {project.demo && (
                 <a
                   href={project.demo}
@@ -273,16 +312,15 @@ const ProjectDetails = () => {
             Technologies Used
           </h2>
           <div className="tech-grid">
-  {project.technologies.map((tech, index) => (
-    <div key={index} className="tech-item">
-      {techIcons[tech] && (
-        <img src={techIcons[tech]} alt={tech} className="tech-icon" />
-      )}
-      <span>{tech}</span>
-    </div>
-  ))}
-</div>
-
+            {project.technologies.map((tech, index) => (
+              <div key={index} className="tech-item">
+                {techIcons[tech] && (
+                  <img src={techIcons[tech]} alt={tech} className="tech-icon" />
+                )}
+                <span>{tech}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

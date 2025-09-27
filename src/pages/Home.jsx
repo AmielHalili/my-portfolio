@@ -16,6 +16,8 @@ import html from '../../src/assets/html-five-svgrepo-com.svg';
 import css from '../assets/css-3-svgrepo-com.svg';
 import nextjs from '../../src/assets/next-dot-js-svgrepo-com.svg';
 import typescript from '../assets/typescript-svgrepo-com.svg';
+import tailwind from '../../src/assets/tailwind-svgrepo-com.svg';
+
 
 import nodejs from '../../src/assets/node-js-svgrepo-com.svg';
 import express from '../../src/assets/express-svgrepo-com.svg';
@@ -26,7 +28,10 @@ import postgresql from '../../src/assets/postgresql-svgrepo-com.svg';
 import postgis from '../../src/assets/server-database-svgrepo-com.svg';
 import qgis from '../../src/assets/qgis-svgrepo-com.svg';
 import php from '../../src/assets/php-svgrepo-com.svg';
+import supabase from '../assets/supabase-svgrepo-com.svg';
+import firebase from '../../src/assets/firebase-svgrepo-com.svg';
 
+import shopify from '../../src/assets/shopify-color-svgrepo-com.svg';
 import git from '../../src/assets/git-merge-svgrepo-com.svg';
 import github from '../../src/assets/github-svgrepo-com.svg';
 import docker from '../../src/assets/docker-svgrepo-com.svg';
@@ -53,6 +58,7 @@ const Home = () => {
     { name: 'Next.js', icon: <img src={nextjs} alt="Next.js" /> },
     { name: 'TypeScript', icon: <img src={typescript} alt="TypeScript" /> },
     { name: 'JavaScript', icon: <img src={javascript} alt="JavaScript" /> },
+    { name: 'Tailwind CSS', icon: <img src={tailwind} alt="Tailwind CSS" /> },
     { name: 'SQL', icon: <img src={sql} alt="SQL" /> },
     { name: 'AWS', icon: <img src={aws} alt="AWS" /> },
     { name: 'RESTful APIs', icon: <img src={restful} alt="Firebase" /> },
@@ -76,6 +82,9 @@ const Home = () => {
     { name: 'PyTorch', icon: <img src={pytorch} alt="PyTorch" /> },
     { name: 'HTML', icon: <img src={html} alt="HTML" /> },
     { name: 'CSS', icon: <img src={css} alt="CSS" /> },
+    { name: 'Firebase', icon: <img src={firebase} alt="Firebase" /> },
+    { name: 'Supabase', icon: <img src={supabase} alt="Supabase" /> },
+    { name: 'Shopify', icon: <img src={shopify} alt="Shopify" /> }
   ];
 
   const greetings = [
