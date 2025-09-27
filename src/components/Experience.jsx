@@ -86,6 +86,8 @@ const Experience = () => {
           })}
           <VerticalTimelineElement
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+            contentStyle={{ display: 'none' }}
+            contentArrowStyle={{ display: 'none' }}
             icon={<FaStar />}
           />
         </VerticalTimeline>
