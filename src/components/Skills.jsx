@@ -1,6 +1,7 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import '../styles/Skills.css';
+import RevealOnScroll from './RevealOnScroll';
 
 import react from '../assets/react-svgrepo-com.svg';
 import javascript from '../assets/javascript-svgrepo-com.svg';
@@ -84,10 +85,10 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills-section">
-      <div className="container">
+      <RevealOnScroll className="container">
         <h2 className="section-title">Skills</h2>
         
-        <div className="skills-marquee">
+        <RevealOnScroll className="skills-marquee">
           <Marquee
             speed={50}
             gradient={false}
@@ -101,10 +102,10 @@ const Skills = () => {
               </div>
             ))}
           </Marquee>
-        </div>
+        </RevealOnScroll>
 
-        <div className="skills-content">
-          <div className="skills-category">
+        <RevealOnScroll className="skills-content" delay={0.1}>
+          <RevealOnScroll className="skills-category">
             <h3>Frontend Development</h3>
             <div className="skills-grid">
               <div className="skill-item">
@@ -131,9 +132,9 @@ const Skills = () => {
                 TailwindCSS</div>
               
             </div>
-          </div>
+          </RevealOnScroll>
 
-          <div className="skills-category">
+          <RevealOnScroll className="skills-category" delay={0.1}>
             <h3>Backend Development</h3>
             <div className="skills-grid">
               <div className="skill-item">
@@ -170,9 +171,9 @@ const Skills = () => {
               <img src={php} alt="PHP" />
                 PHP</div>
             </div>
-          </div>
+          </RevealOnScroll>
 
-          <div className="skills-category">
+          <RevealOnScroll className="skills-category" delay={0.2}>
             <h3>Tools & Technologies</h3>
             <div className="skills-grid">
               <div className="skill-item">
@@ -183,7 +184,7 @@ const Skills = () => {
                 GitHub</div>
               <div className='skill-item'>
               <img src={docker} alt="Shopify" />
-                Shopify Hydrogen/Oxygen</div>
+                Shopify</div>
               <div className="skill-item">
               <img src={docker} alt="Docker" />
                 Docker</div>
@@ -209,9 +210,9 @@ const Skills = () => {
               
               
             </div>
-          </div>
+          </RevealOnScroll>
 
-          <div className="skills-category">
+          <RevealOnScroll className="skills-category" delay={0.3}>
             <h3>Technical Languages</h3>
             <div className="skills-grid">
               <div className="skill-item">
@@ -227,9 +228,9 @@ const Skills = () => {
               <img src={csharp} alt="C#" />
                 C#</div>
             </div>
-          </div>
-        </div>
-      </div>
+          </RevealOnScroll>
+        </RevealOnScroll>
+      </RevealOnScroll>
     </section>
   );
 };

@@ -7,6 +7,9 @@ import About from '../components/About';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
+import TextType from '../components/TextType';
+import RotatingText from '../components/RotatingText';
+import RevealOnScroll from '../components/RevealOnScroll';
 
 import Marquee from 'react-fast-marquee';
 
@@ -50,7 +53,6 @@ import csharp from '../../src/assets/c-sharp-16-svgrepo-com.svg';
 const Home = () => {
   const location = useLocation();
   const [showTitle, setShowTitle] = useState(false);
-  const [currentGreeting, setCurrentGreeting] = useState(0);
 
   const skills = [
     { name: 'React', icon: <img src={react} alt="React" /> },
@@ -101,20 +103,9 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    // Wait for splash screen to complete (3 seconds) before starting the typing animation
     const timer = setTimeout(() => {
       setShowTitle(true);
     }, 3000);
-
-    // Initial delay before starting the greeting cycle
-    const initialDelay = setTimeout(() => {
-      // Start cycling through greetings
-      const greetingInterval = setInterval(() => {
-        setCurrentGreeting((prev) => (prev + 1) % greetings.length);
-      }, 2000);
-
-      return () => clearInterval(greetingInterval);
-    }, 2000);
 
     if (location.state?.scrollTo) {
       const element = document.getElementById(location.state.scrollTo);
@@ -123,10 +114,7 @@ const Home = () => {
       }
     }
 
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(initialDelay);
-    };
+    return () => clearTimeout(timer);
   }, [location.state]);
 
   return (
@@ -136,20 +124,56 @@ const Home = () => {
           <div className="logo-container">
             <img src={ajlogo} alt="AJ Logo" className="home-logo" />
           </div>
-          <div className="text-content">
+          <RevealOnScroll className="text-content">
             <h1 className="home-title" style={{ display: showTitle ? 'block' : 'none' }}>
               <div className="greeting-line">
-                <span className="greeting">{greetings[currentGreeting]}</span>,
+                {showTitle && (
+                  <>
+                    <RotatingText
+                      texts={greetings}
+                      rotationInterval={2000}
+                      staggerFrom="last"
+                      initial={{ y: '100%' }}
+                      animate={{ y: 0 }}
+                      exit={{ y: '-120%' }}
+                      staggerDuration={0.025}
+                      mainClassName="greeting"
+                      splitLevelClassName="greeting-split"
+                    />
+                    <span>,</span>
+                  </>
+                )}
               </div>
-              <div className="name-line">
-                I'm <span className="name">Amiel</span>
-              </div>
+              {showTitle && (
+                <TextType
+                  className="name-line"
+                  text="I'm Amiel"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor
+                  cursorCharacter="|"
+                  loop={false}
+                  renderContent={(value) => {
+                    const nameIndex = value.indexOf('Amiel');
+                    if (nameIndex === -1) {
+                      return value;
+                    }
+
+                    return (
+                      <>
+                        {value.slice(0, nameIndex)}
+                        <span className="name">{value.slice(nameIndex)}</span>
+                      </>
+                    );
+                  }}
+                />
+              )}
             </h1>
             <h2 className="home-subtitle">Full Stack Developer</h2>
             <p className="home-description">
               I build exceptional digital experiences that make a difference.
             </p>
-            <div className="skills-marquee">
+            <RevealOnScroll className="skills-marquee" delay={0.1}>
               <Marquee
                 speed={50}
                 gradient={false}
@@ -163,8 +187,8 @@ const Home = () => {
                   </div>
                 ))}
               </Marquee>
-            </div>
-            <div className="social-links">
+            </RevealOnScroll>
+            <RevealOnScroll className="social-links" delay={0.2}>
               <a href="https://github.com" className="social-link" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
               </a>
@@ -174,11 +198,11 @@ const Home = () => {
               <a href="https://twitter.com" className="social-link" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
-            </div>
-          </div>
-          <div className="profile-picture-container">
+            </RevealOnScroll>
+          </RevealOnScroll>
+          <RevealOnScroll className="profile-picture-container" delay={0.1}>
             <img src={proffesionalphoto} alt="Professional Photo" className="home-profile-photo" />
-          </div>
+          </RevealOnScroll>
         </div>
         <div className="home-page">
           <About />

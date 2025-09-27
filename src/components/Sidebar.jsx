@@ -31,12 +31,26 @@ const Sidebar = () => {
     setIsOpen(false);
   };
 
+  const handleLogoClick = () => {
+    setIsOpen(false);
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
-      <div className={`sidebar-trigger ${isOpen ? 'open' : ''}`} onClick={toggleSidebar}>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
+      <button
+        type="button"
+        className={`sidebar-trigger ${isOpen ? 'open' : ''}`}
+        onClick={toggleSidebar}
+        aria-label="Toggle navigation"
+        aria-expanded={isOpen}
+      >
+        <span className="line"></span>
+        <span className="line"></span>
+        <span className="line"></span>
+      </button>
+      {isOpen && <div className="sidebar-overlay" onClick={toggleSidebar} aria-hidden="true" />}
       
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-content">
@@ -67,7 +81,9 @@ const Sidebar = () => {
           </div>
 
           <div className="sidebar-logo">
-            <img src={ajlogo} alt="AJ Logo" />
+            <button type="button" onClick={handleLogoClick} aria-label="Go to home">
+              <img src={ajlogo} alt="AJ Logo" />
+            </button>
           </div>
         </div>
       </div>

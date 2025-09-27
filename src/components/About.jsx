@@ -1,14 +1,15 @@
 import React from 'react';
 import '../styles/About.css';
 import { FaHeart } from 'react-icons/fa';
+import RevealOnScroll from './RevealOnScroll';
 
 const About = () => {
   return (
     <section id="about" className="about-section">
-      <div className="container">
+      <RevealOnScroll className="container">
         <h2 className="section-title">About Me</h2>
         <div className="about-content">
-          <div className="about-text">
+          <RevealOnScroll className="about-text">
             <p>
               I am a passionate Full Stack Developer with a strong foundation in both frontend and backend technologies. I have taken a recent interest in learning more about AI and Machine Learning too.
               My journey in software development began during my late highschool years, and I've been constantly learning and
@@ -23,8 +24,8 @@ const About = () => {
               When I'm not coding, you can find me exploring new technologies, contributing to hackathons,
               or working on personal projects that challenge my skills.
             </p>
-          </div>
-          <div className="about-stats">
+          </RevealOnScroll>
+          <RevealOnScroll className="about-stats" delay={0.1}>
             <div className="stat-item">
               <h3>2+</h3>
               <p>Years of Experience</p>
@@ -44,9 +45,9 @@ const About = () => {
               </h3>
               <p>Photography📸, Gaming🎮, Cooking🍳, Dancing🕺, Proffesional Eater🍴</p>
             </div>
-          </div>
+          </RevealOnScroll>
         </div>
-      </div>
+      </RevealOnScroll>
     </section>
   );
 };

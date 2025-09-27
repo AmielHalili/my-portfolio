@@ -6,6 +6,7 @@ import dermadetectpage from "../projects/DermadetectPage.png";
 import wanderitinerarypage from "../projects/wanderitinerarypage.png";
 import wanderjournalpage from "../projects/WanderJournalPage.png";
 import hyvepage from "../projects/HyvePage.png";
+import RevealOnScroll from "./RevealOnScroll";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -20,10 +21,10 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <div className="container">
+      <RevealOnScroll className="container">
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
-          <div
+          <RevealOnScroll
             className="project-card"
             onClick={() => handleProjectClick("Ecosense")}
           >
@@ -79,11 +80,12 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
 
-          <div
+          <RevealOnScroll
             className="project-card"
             onClick={() => handleProjectClick("DermaDetect")}
+            delay={0.1}
           >
             <div className="window-controls">
               <div className="control-circle red"></div>
@@ -137,140 +139,12 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
 
-          <div
-            className="project-card"
-            onClick={() => handleProjectClick("Wander Travel Itinerary")}
-          >
-            <div className="window-controls">
-              <div className="control-circle red"></div>
-              <div className="control-circle yellow"></div>
-              <div className="control-circle green"></div>
-            </div>
-            <div className="project-image">
-              <img src={wanderitinerarypage} alt="Wander Travel Itinerary" />
-            </div>
-            <div className="project-content">
-              <h3>Wander - Travel Itinerary</h3>
-              <p className="project-description">
-                A website that allows users to create and share travel
-                itineraries, and share their own experiences with others.
-              </p>
-              <div className="project-tech">
-                <span>React</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-              </div>
-              <div className="project-links">
-                <a
-                  href="https://wander-tau.vercel.app/home"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Live Site
-                </a>
-                <a
-                  href="https://github.com/AmielHalili/Wander"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="project-card"
-            onClick={() => handleProjectClick("Wander Journal")}
-          >
-            <div className="window-controls">
-              <div className="control-circle red"></div>
-              <div className="control-circle yellow"></div>
-              <div className="control-circle green"></div>
-            </div>
-            <div className="project-image">
-              <img src={wanderjournalpage} alt="Wander Journal" />
-            </div>
-            <div className="project-content">
-              <h3>Wander - Journal</h3>
-              <p className="project-description">
-                A website that allows users to write about their travel
-                experiences.
-              </p>
-              <div className="project-tech">
-                <span>React</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-              </div>
-              <div className="project-links">
-                {/* <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a> */}
-                <a
-                  href="https://github.com/tim56rus/travel-guide"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://www.youtube.com/watch?v=7S6OhmtESoc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="project-card"
-            onClick={() => handleProjectClick("Whooga")}
-          >
-            <div className="window-controls">
-              <div className="control-circle red"></div>
-              <div className="control-circle yellow"></div>
-              <div className="control-circle green"></div>
-            </div>
-            <div className="project-image">
-              <img src="/path-to-project-image-3.jpg" alt="Whooga" />
-            </div>
-            <div className="project-content">
-              <h3>Whooga (In Progress)</h3>
-              <p className="project-description">
-                A website that allows users to write about their travel
-                experiences.
-              </p>
-              <div className="project-tech">
-                <span>React</span>
-                <span>Leaflet</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>PostgreSQL</span>
-                <span>PostGIS</span>
-                <span>QGIS</span>
-              </div>
-              <div className="project-links">
-                {/* <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a> */}
-                {/* <a href="https://github.com/tim56rus/travel-guide" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a> */}
-              </div>
-            </div>
-          </div>
-
-          <div
+          <RevealOnScroll
             className="project-card"
             onClick={() => handleProjectClick("Hyve")}
+            delay={0.2}
           >
             <div className="window-controls">
               <div className="control-circle red"></div>
@@ -325,9 +199,143 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll
+            className="project-card"
+            onClick={() => handleProjectClick("Wander Travel Itinerary")}
+            delay={0.3}
+          >
+            <div className="window-controls">
+              <div className="control-circle red"></div>
+              <div className="control-circle yellow"></div>
+              <div className="control-circle green"></div>
+            </div>
+            <div className="project-image">
+              <img src={wanderitinerarypage} alt="Wander Travel Itinerary" />
+            </div>
+            <div className="project-content">
+              <h3>Wander - Travel Itinerary</h3>
+              <p className="project-description">
+                A website that allows users to create and share travel
+                itineraries, and share their own experiences with others.
+              </p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+              </div>
+              <div className="project-links">
+                <a
+                  href="https://wander-tau.vercel.app/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Site
+                </a>
+                <a
+                  href="https://github.com/AmielHalili/Wander"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll
+            className="project-card"
+            onClick={() => handleProjectClick("Wander Journal")}
+            delay={0.4}
+          >
+            <div className="window-controls">
+              <div className="control-circle red"></div>
+              <div className="control-circle yellow"></div>
+              <div className="control-circle green"></div>
+            </div>
+            <div className="project-image">
+              <img src={wanderjournalpage} alt="Wander Journal" />
+            </div>
+            <div className="project-content">
+              <h3>Wander - Journal</h3>
+              <p className="project-description">
+                A website that allows users to write about their travel
+                experiences.
+              </p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+              </div>
+              <div className="project-links">
+                {/* <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a> */}
+                <a
+                  href="https://github.com/tim56rus/travel-guide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.youtube.com/watch?v=7S6OhmtESoc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll
+            className="project-card"
+            onClick={() => handleProjectClick("Whooga")}
+            delay={0.5}
+          >
+            <div className="window-controls">
+              <div className="control-circle red"></div>
+              <div className="control-circle yellow"></div>
+              <div className="control-circle green"></div>
+            </div>
+            <div className="project-image">
+              <img src="/path-to-project-image-3.jpg" alt="Whooga" />
+            </div>
+            <div className="project-content">
+              <h3>Whooga (In Progress)</h3>
+              <p className="project-description">
+                A website that allows users to write about their travel
+                experiences.
+              </p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Leaflet</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+                <span>PostGIS</span>
+                <span>QGIS</span>
+              </div>
+              <div className="project-links">
+                {/* <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a> */}
+                {/* <a href="https://github.com/tim56rus/travel-guide" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a> */}
+              </div>
+            </div>
+          </RevealOnScroll>
+
+          
         </div>
-      </div>
+      </RevealOnScroll>
     </section>
   );
 };
