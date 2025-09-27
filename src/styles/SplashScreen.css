@@ -46,12 +46,11 @@
   text-shadow: 0 0 10px rgba(0, 195, 255, 0.2);
   letter-spacing: clamp(1px, 0.4vw, 4px);
   line-height: 1.05;
-  max-width: min(90vw, 28rem);
   display: inline-flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   gap: clamp(0.05em, 0.5vw, 0.15em);
-  overflow-wrap: anywhere;
 }
 
 .letter {
