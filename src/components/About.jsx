@@ -43,7 +43,7 @@ const About = () => {
                 <span className="icon"><FaHeart /></span>
                 Hobbies
               </h3>
-              <p>Photography📸, Gaming🎮, Cooking🍳, Dancing🕺, Proffesional Eater🍴</p>
+              <p>Photography📸, Gaming🎮, Cooking🍳, Dancing🕺, Professional Eater🍴</p>
             </div>
           </RevealOnScroll>
         </div>

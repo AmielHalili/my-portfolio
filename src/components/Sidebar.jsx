@@ -18,7 +18,7 @@ const Sidebar = () => {
 
   const handleEmailClick = async () => {
     try {
-      await navigator.clipboard.writeText('str8lanes@gmail.com');
+      await navigator.clipboard.writeText('amieljeremiahhalili@gmail.com');
       setShowTooltip(true);
       setTimeout(() => setShowTooltip(false), 2000);
     } catch (err) {

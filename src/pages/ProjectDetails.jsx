@@ -166,9 +166,9 @@ const ProjectDetails = () => {
       image: wanderlogo,
     },
     whooga: {
-      title: "Whooga (In Progress)",
+      title: "Whooga (Senior Design Finalist)",
       overview:
-        "A website that allows users to write about their travel experiences.",
+        "Whooga is a localized platform designed for collectors of specialized items. Unlike traditional marketplaces, it uses semantic search to go beyond simple keywords. Users can set notifications for the items they care about, and they will still be alerted even if the buyer or seller describes the product differently. This helps collectors discover the exact items they are looking for in their area. We support in-app messaging to facilitate transactions and meetups.",
       features: [
         "Geospatial data visualization",
         "Interactive maps",
@@ -187,7 +187,9 @@ const ProjectDetails = () => {
         "PostgreSQL",
         "PostGIS",
         "QGIS",
+        "Python"
       ],
+      demo: "https://www.cecs.ucf.edu/SeniorDesignShowcase/team/whooga/",
       image: ajlogo,
     },
 

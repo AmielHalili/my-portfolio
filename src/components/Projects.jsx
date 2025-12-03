@@ -7,6 +7,7 @@ import wanderitinerarypage from "../projects/wanderitinerarypage.png";
 import wanderjournalpage from "../projects/WanderJournalPage.png";
 import hyvepage from "../projects/HyvePage.png";
 import RevealOnScroll from "./RevealOnScroll";
+import whoogapage from "../projects/WhoogaPage.png";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -307,13 +308,12 @@ const Projects = () => {
               <div className="control-circle green"></div>
             </div>
             <div className="project-image">
-              <img src="/path-to-project-image-3.jpg" alt="Whooga" />
+              <img src={whoogapage} alt="Whooga" />
             </div>
             <div className="project-content">
-              <h3>Whooga (In Progress)</h3>
+              <h3>Whooga (Senior Design Finalist)</h3>
               <p className="project-description">
-                A website that allows users to write about their travel
-                experiences.
+                A localized semantic search platform connects specialized collectors with exact, location-based items and notifies them even with varied product descriptions.
               </p>
               <div className="project-tech">
                 <span>React</span>
@@ -327,8 +327,7 @@ const Projects = () => {
                 <span>QGIS</span>
               </div>
               <div className="project-links">
-                {/* <a href="#" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Live Demo</a> */}
-                {/* <a href="https://github.com/tim56rus/travel-guide" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GitHub</a> */}
+                {<a href="https://www.youtube.com/watch?v=RvimowOEYBU&t=332s" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Presentation & Demo</a>}
               </div>
             </div>
           </RevealOnScroll>

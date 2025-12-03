@@ -147,7 +147,7 @@ const Skills = () => {
               <img src={supabase} alt="Supabase" />
                 Supabase</div>
               <div className='skill-item'>
-              <img src={shopify} alt="Firebase" />
+              <img src={firebase} alt="Firebase" />
                 Firebase</div>
               <div className="skill-item">
               <img src={mongodb} alt="MongoDB" />
@@ -183,7 +183,7 @@ const Skills = () => {
               <img src={github} alt="GitHub" />
                 GitHub</div>
               <div className='skill-item'>
-              <img src={docker} alt="Shopify" />
+              <img src={shopify} alt="Shopify" />
                 Shopify</div>
               <div className="skill-item">
               <img src={docker} alt="Docker" />

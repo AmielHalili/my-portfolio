@@ -9,9 +9,9 @@ const timelineItems = [
   {
     id: 'mirai-arcade',
     type: 'work',
-    title: 'Software Developer & IT Associate',
+    title: 'Software Engineer',
     subtitle: 'Mirai Arcade',
-    date: 'May 2025 – Present',
+    date: 'January 2025 – Present',
     bullets: [
       'Built and maintained a Shopify storefront with Hydrogen/Oxygen, improving frontend performance and streamlining checkout for 100+ monthly users.',
       'Supported POS and membership systems; combined software diagnostics with hardware support to increase uptime and reliability.'
