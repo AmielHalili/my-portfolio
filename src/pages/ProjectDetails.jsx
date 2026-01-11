@@ -231,7 +231,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section className="py-16 md:py-20 bg-dark-gray min-h-screen">
+    <section className="project-details py-16 md:py-20 bg-dark-gray min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="overview-container bg-mid-gray rounded-xl shadow-lg overflow-hidden mb-8">

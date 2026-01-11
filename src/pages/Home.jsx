@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import '../styles/Home.css';
 import ajlogo from '../assets/ajlogo.png';
 import proffesionalphoto from '../assets/proffesionalphoto.png';
+import proffessionalphoto from '../assets/proffessionalphoto.jpeg';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
@@ -201,7 +202,7 @@ const Home = () => {
             </RevealOnScroll>
           </RevealOnScroll>
           <RevealOnScroll className="profile-picture-container" delay={0.1}>
-            <img src={proffesionalphoto} alt="Professional Photo" className="home-profile-photo" />
+            <img src={proffessionalphoto} alt="Professional Photo" className="home-profile-photo" />
           </RevealOnScroll>
         </div>
         <div className="home-page">

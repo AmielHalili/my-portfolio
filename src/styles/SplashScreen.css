@@ -40,7 +40,7 @@
 
 .logo-header {
   color: var(--light-blue);
-  font-size: clamp(1.2rem, 8vw, 6rem);
+  font-size: clamp(1.2rem, 8vw, 8rem);
   font-weight: 900;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 195, 255, 0.2);
@@ -83,7 +83,7 @@
     max-width: 100%;
     gap: 0.075em;
     letter-spacing: 0.05em;
-    font-size: clamp(1rem, 9vw, 2.8rem);
+    font-size: clamp(1rem, 9vw, 4rem);
   }
 }
 
@@ -93,7 +93,7 @@
   }
 
   .logo-header {
-    font-size: clamp(0.95rem, 11vw, 2.4rem);
+    font-size: clamp(0.95rem, 11vw, 4rem);
     letter-spacing: 0.04em;
   }
 }
