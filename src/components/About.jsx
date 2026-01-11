@@ -11,18 +11,10 @@ const About = () => {
         <div className="about-content">
           <RevealOnScroll className="about-text">
             <p>
-              I am a passionate Full Stack Developer with a strong foundation in both frontend and backend technologies. I have taken a recent interest in learning more about AI and Machine Learning too.
-              My journey in software development began during my late highschool years, and I've been constantly learning and
-              improving my skills ever since.
+              I’m a full stack developer who loves shipping polished experiences end to end. My toolkit spans React, Node.js, and modern databases, and lately I’ve been diving into AI/ML to level up what I build.
             </p>
             <p>
-              I specialize in creating responsive, user-friendly web applications using modern technologies like React,
-              Node.js, and various databases. I'm particularly interested in building unique and scalable applications that solve
-              real-world problems.
-            </p>
-            <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to hackathons,
-              or working on personal projects that challenge my skills.
+              Outside of coding, you’ll catch me experimenting with new tech, jumping into hackathons, or crafting side projects that stretch my skills.
             </p>
           </RevealOnScroll>
           <RevealOnScroll className="about-stats" delay={0.1}>
