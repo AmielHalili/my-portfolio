@@ -7,7 +7,7 @@ const Footer = () => {
 
   const handleEmailClick = async () => {
     try {
-      await navigator.clipboard.writeText('str8lanes@gmail.com');
+      await navigator.clipboard.writeText('amieljeremiahhalili@gmail.com');
       setShowTooltip(true);
       setTimeout(() => setShowTooltip(false), 2000);
     } catch (err) {
@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <p className="footer-text">
-          © {new Date().getFullYear()} Amiel Halili. All rights reserved.
+          © {new Date().getFullYear()} Amiel Halili. Built with care.
         </p>
         <div className="footer-icons">
           <button

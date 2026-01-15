@@ -8,6 +8,7 @@ import SplashScreen from './components/SplashScreen';
 import ScrollMeter from './components/ScrollMeter';
 import Sidebar from './components/Sidebar';
 import './styles/global.css';
+import './styles/App.css';
 import ProjectDetails from './pages/ProjectDetails';
 
 const App = () => {

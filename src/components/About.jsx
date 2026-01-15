@@ -11,10 +11,10 @@ const About = () => {
         <div className="about-content">
           <RevealOnScroll className="about-text">
             <p>
-              I’m a full stack developer who loves shipping polished experiences end to end. My toolkit spans React, Node.js, and modern databases, and lately I’ve been diving into AI/ML to level up what I build.
+              I'm a full stack developer who loves shipping polished experiences end to end. My toolkit spans React, Node.js, and modern databases, and lately I've been diving into AI/ML to level up what I build.
             </p>
             <p>
-              Outside of coding, you’ll catch me experimenting with new tech, jumping into hackathons, or crafting side projects that stretch my skills.
+              Outside of coding, you'll catch me experimenting with new tech, jumping into hackathons, or crafting side projects that stretch my skills.
             </p>
           </RevealOnScroll>
           <RevealOnScroll className="about-stats" delay={0.1}>
@@ -35,7 +35,7 @@ const About = () => {
                 <span className="icon"><FaHeart /></span>
                 Hobbies
               </h3>
-              <p>Photography📸, Gaming🎮, Cooking🍳, Dancing🕺, Professional Eater🍴</p>
+              <p>Photography, gaming, cooking, dancing, and relentless foodie hunts.</p>
             </div>
           </RevealOnScroll>
         </div>

@@ -49,7 +49,7 @@ const Skills = () => {
     { name: 'JavaScript', icon: <img src={javascript} alt="JavaScript" /> },
     { name: 'SQL', icon: <img src={sql} alt="SQL" /> },
     { name: 'AWS', icon: <img src={aws} alt="AWS" /> },
-    { name: 'RESTful APIs', icon: <img src={restful} alt="Firebase" /> },
+    { name: 'RESTful APIs', icon: <img src={restful} alt="RESTful APIs" /> },
     { name: 'PostgreSQL', icon: <img src={postgresql} alt="PostgreSQL" /> },
     { name: 'PostGIS', icon: <img src={postgis} alt="PostGIS" /> },
     { name: 'QGIS', icon: <img src={qgis} alt="QGIS" /> },

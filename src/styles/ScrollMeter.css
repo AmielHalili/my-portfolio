@@ -4,19 +4,20 @@
   top: 50%;
   transform: translateY(-50%);
   height: 60vh;
-  width: 6px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  width: 7px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
   z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .scroll-meter-progress {
   width: 100%;
-  background-color: #007bff;
+  background: linear-gradient(180deg, var(--light-blue), var(--bright-blue));
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 3px;
+  border-radius: 999px;
 }
 
 @media (max-width: 768px) {

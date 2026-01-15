@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import '../styles/Home.css';
 import ajlogo from '../assets/ajlogo.png';
-import proffesionalphoto from '../assets/proffesionalphoto.png';
 import proffessionalphoto from '../assets/proffessionalphoto.jpeg';
 import About from '../components/About';
 import Skills from '../components/Skills';
@@ -64,7 +63,7 @@ const Home = () => {
     { name: 'Tailwind CSS', icon: <img src={tailwind} alt="Tailwind CSS" /> },
     { name: 'SQL', icon: <img src={sql} alt="SQL" /> },
     { name: 'AWS', icon: <img src={aws} alt="AWS" /> },
-    { name: 'RESTful APIs', icon: <img src={restful} alt="Firebase" /> },
+    { name: 'RESTful APIs', icon: <img src={restful} alt="RESTful APIs" /> },
     { name: 'PostgreSQL', icon: <img src={postgresql} alt="PostgreSQL" /> },
     { name: 'PostGIS', icon: <img src={postgis} alt="PostGIS" /> },
     { name: 'QGIS', icon: <img src={qgis} alt="QGIS" /> },
@@ -90,23 +89,12 @@ const Home = () => {
     { name: 'Shopify', icon: <img src={shopify} alt="Shopify" /> }
   ];
 
-  const greetings = [
-    'Hello',
-    'Hola',
-    'Bonjour',
-    'こんにちは',
-    '你好',
-    '안녕하세요',
-    'Ciao',
-    'Hallo',
-    'नमस्ते',
-    'مرحبا'
-  ];
+  const greetings = ['Hello', 'Hola', 'Bonjour', 'Ciao', 'Hallo', 'Salut', 'Howdy', 'Namaste'];
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowTitle(true);
-    }, 3000);
+    }, 1200);
 
     if (location.state?.scrollTo) {
       const element = document.getElementById(location.state.scrollTo);
@@ -126,6 +114,7 @@ const Home = () => {
             <img src={ajlogo} alt="AJ Logo" className="home-logo" />
           </div>
           <RevealOnScroll className="text-content">
+            <div className="home-chip">Building thoughtful digital products</div>
             <h1 className="home-title" style={{ display: showTitle ? 'block' : 'none' }}>
               <div className="greeting-line">
                 {showTitle && (
@@ -172,8 +161,16 @@ const Home = () => {
             </h1>
             <h2 className="home-subtitle">Full Stack Developer</h2>
             <p className="home-description">
-              I build exceptional digital experiences that make a difference.
+              I design and ship clean, resilient experiences end to end while balancing product thinking with strong engineering fundamentals.
             </p>
+            <div className="home-actions">
+              <a className="primary-action" href="#projects">
+                View projects
+              </a>
+              <a className="ghost-action" href="#experience">
+                Work history
+              </a>
+            </div>
             <RevealOnScroll className="skills-marquee" delay={0.1}>
               <Marquee
                 speed={50}
@@ -190,19 +187,19 @@ const Home = () => {
               </Marquee>
             </RevealOnScroll>
             <RevealOnScroll className="social-links" delay={0.2}>
-              <a href="https://github.com" className="social-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/AmielHalili" className="social-link" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
               </a>
               <a href="https://www.linkedin.com/in/amiel-halili" className="social-link" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="https://twitter.com" className="social-link" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter"></i>
+              <a href="mailto:amieljeremiahhalili@gmail.com" className="social-link" rel="noreferrer">
+                <i className="fas fa-envelope"></i>
               </a>
             </RevealOnScroll>
           </RevealOnScroll>
           <RevealOnScroll className="profile-picture-container" delay={0.1}>
-            <img src={proffessionalphoto} alt="Professional Photo" className="home-profile-photo" />
+            <img src={proffessionalphoto} alt="Professional headshot" className="home-profile-photo" />
           </RevealOnScroll>
         </div>
         <div className="home-page">

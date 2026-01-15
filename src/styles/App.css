@@ -10,26 +10,38 @@ body {
 }
 
 /* Ensure smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Add smooth scrolling for all scrollable elements */
+html,
 * {
   scroll-behavior: smooth;
 }
 
 .app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  isolation: isolate;
+}
+
+.app::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(34, 211, 238, 0.08), transparent 40%);
+  opacity: 0.9;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .main-content {
-  padding-top: 4rem; /* Height of the navbar */
-  flex: 1;
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(2.5rem, 5vw, 4rem);
   display: flex;
   flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  position: relative;
+  z-index: 1;
 }
 
 footer {
@@ -37,7 +49,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--dark-gray);
+  background-color: transparent;
   padding: 2rem 0;
 }
 
@@ -53,6 +65,6 @@ footer {
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
   margin-top: 1rem;
-} 
+}
